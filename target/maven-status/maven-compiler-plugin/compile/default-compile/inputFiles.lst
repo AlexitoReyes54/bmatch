@@ -1,5 +1,8 @@
+/home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Models/AuthenticationResponse.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/BmatchApplication.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Utils/JwtUtil.java
+/home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Interafaces/SingIn.java
+/home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Services/MailSenderService.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Repositories/UserDetailRepository.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Utils/PasswordEncrypt.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Controllers/RegistrationController.java
@@ -11,7 +14,10 @@
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Repositories/UserAuthRepository.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Interafaces/RegisterService.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Models/Image.java
-/home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Services/MailSender.java
+/home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Models/UserSavedStatus.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Models/UserDetail.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Models/UserRegistration.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Models/UserAuth.java
+/home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Models/AuthRequest.java
+/home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Services/SingInServiceImpl.java
+/home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Models/RegistrationResponse.java

@@ -4,7 +4,7 @@ import com.example.bmatch.Models.AuthenticationResponse;
 
 public interface SingIn {
 
-    public AuthenticationResponse singInProcess();
+    public AuthenticationResponse singInProcess(String email,String password);
 
     private boolean findEmail() {
         return false;

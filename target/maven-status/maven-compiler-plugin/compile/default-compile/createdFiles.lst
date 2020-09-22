@@ -2,7 +2,10 @@ com/example/bmatch/Utils/PasswordEncrypt.class
 com/example/bmatch/Utils/JwtUtil.class
 com/example/bmatch/Models/UserAuth.class
 com/example/bmatch/Repositories/UserAuthRepository.class
+com/example/bmatch/Models/AuthenticationResponse.class
+com/example/bmatch/Interafaces/SingIn.class
 com/example/bmatch/Models/Image.class
+com/example/bmatch/Services/SingInServiceImpl.class
 com/example/bmatch/Models/UserRegistration.class
 com/example/bmatch/Models/RegistrationResponse.class
 com/example/bmatch/Controllers/SignInController.class
@@ -16,4 +19,5 @@ com/example/bmatch/Services/MailSenderService.class
 com/example/bmatch/Repositories/UserDetailRepository.class
 com/example/bmatch/Controllers/RegistrationController.class
 com/example/bmatch/BmatchApplication.class
+com/example/bmatch/Models/AuthRequest.class
 com/example/bmatch/Models/Preferences.class

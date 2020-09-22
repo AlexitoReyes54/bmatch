@@ -140,7 +140,9 @@ public class RegisterServiceImpl implements RegisterService {
         auth.setActive(0);
         auth.setEmail(registration.getGmail());
 
-            return auth;
+        System.out.println(auth.getPassword());
+        System.out.println(auth.getPassword().length());
+        return auth;
     }
 
     private int pinGenerator(){
