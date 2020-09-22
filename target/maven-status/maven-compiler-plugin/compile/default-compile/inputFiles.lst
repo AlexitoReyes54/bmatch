@@ -1,6 +1,7 @@
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Models/AuthenticationResponse.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/BmatchApplication.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Utils/JwtUtil.java
+/home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Repositories/PreferencesRepository.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Interafaces/SingIn.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Services/MailSenderService.java
 /home/reyes/Workspace/Java/bmatch/src/main/java/com/example/bmatch/Repositories/UserDetailRepository.java

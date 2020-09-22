@@ -1,10 +1,8 @@
 package com.example.bmatch.Services;
 
 import com.example.bmatch.Interafaces.RegisterService;
-import com.example.bmatch.Models.UserAuth;
-import com.example.bmatch.Models.UserDetail;
-import com.example.bmatch.Models.UserRegistration;
-import com.example.bmatch.Models.UserSavedStatus;
+import com.example.bmatch.Models.*;
+import com.example.bmatch.Repositories.PreferencesRepository;
 import com.example.bmatch.Repositories.UserAuthRepository;
 import com.example.bmatch.Repositories.UserDetailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +15,10 @@ import java.util.Optional;
 public class RegisterServiceImpl implements RegisterService {
     private int activationPin;
     private String email;
+    private int detailId;
 
+    @Autowired
+    private PreferencesRepository preferencesRepository;
     @Autowired
     private UserSavedStatus userSavedStatus;
     @Autowired
@@ -37,11 +38,19 @@ public class RegisterServiceImpl implements RegisterService {
             userSavedStatus.setValidMail(true);
             boolean detailSaved =  executeDetailRegistration(user);
             boolean authsaved = executeAuthRegistration(user);
-            return processComplete(detailSaved,authsaved);
+            return processComplete(detailSaved,authsaved,user);
         }else{
             userSavedStatus.setValidMail(false);
             userSavedStatus.setError(false);
             return userSavedStatus;
+        }
+    }
+
+    private void executePreferencesSave(UserRegistration user){
+        try{
+         savePreferences(user);
+        }catch (Exception e) {
+            System.out.println("Error " + e);
         }
     }
 
@@ -50,8 +59,7 @@ public class RegisterServiceImpl implements RegisterService {
         this.activationPin = pinGenerator();
     }
 
-    //i will change this to response object type
-    private UserSavedStatus processComplete(boolean detail,boolean auth){
+    private UserSavedStatus processComplete(boolean detail,boolean auth,UserRegistration user){
         if (detail == true && auth == true){
             userSavedStatus.setError(false);
             //sendActivationMail();
@@ -90,7 +98,6 @@ public class RegisterServiceImpl implements RegisterService {
             return false;
         }
     }
-
 
     @Override
     public int findDetailUserId(String name,String lastname) {
@@ -143,6 +150,28 @@ public class RegisterServiceImpl implements RegisterService {
         System.out.println(auth.getPassword());
         System.out.println(auth.getPassword().length());
         return auth;
+    }
+
+    private Preferences buildPreferences(UserRegistration user){
+        //int detailId = findDetailUserId(user.getUserName(),user.getUserLastname());
+        Preferences pref = new Preferences();
+        pref.setMinAge(0);
+        pref.setMaxAge(0);
+        pref.setUserId(detailId);
+        pref.setGenderPreference(selectGenderPref(user.getGender()));
+        return pref;
+    }
+
+    private String selectGenderPref(String gender){
+        if (gender == "M"){
+            return "F";
+        }else{
+            return "M";
+        }
+    }
+
+    private void savePreferences(UserRegistration user){
+        preferencesRepository.save(buildPreferences(user));
     }
 
     private int pinGenerator(){
