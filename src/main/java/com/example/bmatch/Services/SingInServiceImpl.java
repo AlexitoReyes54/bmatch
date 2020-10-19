@@ -42,7 +42,7 @@ public class SingInServiceImpl implements SingIn {
     }
 
     private void validateCredentials(String email,String password){
-        if (checkEmail(email) == true && passwordIsCorrect(password,email) == true){
+        if (checkEmail(email) && passwordIsCorrect(password,email) && accountIsActive(email)){
             updateResponseValues(true);
         }else {
             updateResponseValues(false);
@@ -67,4 +67,14 @@ public class SingInServiceImpl implements SingIn {
         }
 
     }
+
+    private boolean accountIsActive(String email) {
+        Optional<UserAuth> userObj =  userAuthRepository.findByEmail(email);
+        if (userObj.get().getActive() == 1){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 }

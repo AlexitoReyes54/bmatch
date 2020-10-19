@@ -13,4 +13,8 @@ public interface SingIn {
     private boolean passwordIsCorrect() {
         return false;
     }
+
+    private boolean accountIsActive() {
+        return false;
+    }
 }
