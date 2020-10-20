@@ -4,7 +4,9 @@ com/example/bmatch/Models/AuthenticationResponse.class
 com/example/bmatch/Interafaces/SingIn.class
 com/example/bmatch/Models/Image.class
 com/example/bmatch/Models/ActivationRequest.class
+com/example/bmatch/Controllers/LocationController.class
 com/example/bmatch/Models/UserLocation.class
+com/example/bmatch/Services/UserLocationService.class
 com/example/bmatch/Models/UserSavedStatus.class
 com/example/bmatch/Config/SecurityConfiguration.class
 com/example/bmatch/Repositories/ImageRepository.class
@@ -14,6 +16,7 @@ com/example/bmatch/Services/ImageServicesImpl.class
 com/example/bmatch/Repositories/UserDetailRepository.class
 com/example/bmatch/Controllers/RegistrationController.class
 com/example/bmatch/Models/AuthRequest.class
+com/example/bmatch/Repositories/LocationRepository.class
 com/example/bmatch/Repositories/PreferencesRepository.class
 com/example/bmatch/Controllers/ImageController.class
 com/example/bmatch/Utils/PasswordEncrypt.class
