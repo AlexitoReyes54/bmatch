@@ -1,45 +1,45 @@
 package com.example.bmatch.Models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name="Preferences")
+@Table(name="image")
 public class Image {
 
     @Id
-    @Column(name="image_id")
-    public int imageId;
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    public int image_id;
+
     @Column(name="user_id")
-    public String userId;
-    @Column(name="image_url")
-    public int imageUrl;
+    public int userId;
+
+    @Column(name="url")
+    public String imageUrl;
+
     @Column(name="profile")
     public int profile;
 
     public int getImageId() {
-        return imageId;
+        return image_id;
     }
 
     public void setImageId(int imageId) {
-        this.imageId = imageId;
+        this.image_id = imageId;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public int getImageUrl() {
+    public String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImageUrl(int imageUrl) {
+    public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
 

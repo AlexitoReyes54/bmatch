@@ -17,13 +17,14 @@ public class ImageController {
 
     @GetMapping("/img")
     public boolean test(){
+        //imageServices.saveNewPhoto(1312);
         return true;
     }
 
     @PostMapping(value = "/uploadImg",consumes = {"multipart/form-data"})
     public boolean up(@RequestParam("file") MultipartFile file){
         try{
-            imageServices.storeFile(file);
+            imageServices.storeFile(file,1231);
             return true;
         }catch (Exception e){
             System.out.println("no manito");
