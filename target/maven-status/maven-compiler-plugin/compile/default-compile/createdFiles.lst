@@ -6,6 +6,7 @@ com/example/bmatch/Models/Image.class
 com/example/bmatch/Models/ActivationRequest.class
 com/example/bmatch/Controllers/LocationController.class
 com/example/bmatch/Models/UserLocation.class
+com/example/bmatch/Repositories/MatchRepository.class
 com/example/bmatch/Services/UserLocationService.class
 com/example/bmatch/Models/UserSavedStatus.class
 com/example/bmatch/Config/SecurityConfiguration.class
@@ -21,15 +22,19 @@ com/example/bmatch/Repositories/PreferencesRepository.class
 com/example/bmatch/Controllers/ImageController.class
 com/example/bmatch/Utils/PasswordEncrypt.class
 com/example/bmatch/Controllers/ActivationController.class
+com/example/bmatch/Controllers/MatchController.class
 com/example/bmatch/Models/UserAuth.class
+com/example/bmatch/Interafaces/MatchService.class
 com/example/bmatch/Services/SingInServiceImpl.class
 com/example/bmatch/Models/UserRegistration.class
 com/example/bmatch/Models/RegistrationResponse.class
 com/example/bmatch/Controllers/SignInController.class
 com/example/bmatch/Interafaces/ImageServices.class
 com/example/bmatch/Services/AccountActivationImp.class
+com/example/bmatch/Services/MatchServiceImpl.class
 com/example/bmatch/Interafaces/RegisterService.class
 com/example/bmatch/Services/RegisterServiceImpl.class
 com/example/bmatch/Services/MailSenderService.class
 com/example/bmatch/BmatchApplication.class
+com/example/bmatch/Models/Match.class
 com/example/bmatch/Models/Preferences.class
